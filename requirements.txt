@@ -7,3 +7,4 @@ python-jose[cryptography]
 fastapi-cors
 bcrypt
 gunicorn
+email-validator
