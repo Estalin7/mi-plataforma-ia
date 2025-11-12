@@ -4,7 +4,7 @@ from typing import List
 
 class Settings(BaseSettings):
     # MongoDB
-    MONGODB_URL: str = "mongodb://localhost:27017"
+    MONGODB_URL: str = "mongodb+srv://prepia_user:oWV1vrnRtbosgPOO@cluster0.gsqytqw.mongodb.net/"
     MONGODB_DB_NAME: str = "prepia_db"
     
     # Gemini
