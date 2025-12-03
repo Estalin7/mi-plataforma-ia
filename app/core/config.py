@@ -4,14 +4,12 @@ from typing import List
 
 class Settings(BaseSettings):
     # MongoDB
+    # Definimos la URL con un valor por defecto (o la tomará de las variables si existe)
     MONGODB_URL: str = "mongodb+srv://prepia_user:oWV1vrnRtbosgPOO@cluster0.gsqytqw.mongodb.net/"
     MONGODB_DB_NAME: str = "prepia_db"
     
     # Gemini
     GEMINI_API_KEY: str
-    
-    # --- ¡MODELO CORREGIDO! ---
-    # Este es el modelo que SÍ está en tu lista de la API
     GEMINI_MODEL: str = "gemini-flash-latest" 
     
     # Server
@@ -24,13 +22,12 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS265"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 43200
     
-    # --- ¡CAMBIO IMPORTANTE AQUÍ! ---
-    # Permitimos todos los orígenes ("*") para el desarrollo
     ALLOWED_ORIGINS: List[str] = ["*"]
     
     class Config:
-        # Le decimos que lea el archivo .env
         env_file = ".env" 
         case_sensitive = True
+        # --- ¡ESTA ES LA LÍNEA MÁGICA! ---
+        extra = "ignore" 
 
 settings = Settings()
