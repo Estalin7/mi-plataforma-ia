@@ -27,14 +27,6 @@ Backend completo para plataforma de preparación preuniversitaria con **FastAPI*
 
 ##  Obtener API Key de Gemini (GRATIS)
 
-1. Visita: https://aistudio.google.com/app/apikey
-2. Haz clic en "Create API Key"
-3. Copia la key generada
-4. Pégala en el archivo `.env`:
-```env
-GEMINI_API_KEY=tu_key_aqui
-```
-
 ##  Estructura del Proyecto
 ```
 PLATAFORMA_IA/
